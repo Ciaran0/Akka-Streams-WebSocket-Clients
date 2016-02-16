@@ -1,0 +1,35 @@
+{
+  "name": "Akka-Http-Akka-Streams-EventBus-WebSocket",
+  "version": "0.1.0",
+  "description": "Akka-Steam publishing content to connected clients through WebSocket",
+  "keywords": [
+    "angular",
+    "Akka-hhtp",
+    "Swagger",
+    "Bootstrap"
+  ],
+  "author": {
+    "name": "Ciaran",
+    "email": "ciaranoconnor23@gmail.com",
+    "url": "https://github.com/ciaran0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-ng-annotate": "^1.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "jshint": "~2.8.0",
+    "gulp-jshint": "~1.11.2",
+    "jshint-stylish": "^0.2.0"
+  }
+}

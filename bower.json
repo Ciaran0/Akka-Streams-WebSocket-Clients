@@ -1,0 +1,30 @@
+{
+  "name": "Akka-Http-Akka-Streams-EventBus-WebSocket",
+  "version": "0.1.0",
+  "description": "Akka-Steam publishing content to connected clients through WebSocket",
+  "keywords": [
+    "angular",
+    "akka-http",
+    "Swagger",
+    "Bootstrap"
+  ],
+  "author": {
+    "name": "Ciaran",
+    "email": "ciaranoconnor23@gmail.com",
+    "url": "https://github.com/ciaran0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "3.2.0",
+    "angular-animate": "^1.3.0-rc.0",
+    "angular-route": "^1.3.0-rc.0",
+    "angular-resource": "^1.3.0-rc.0",
+    "angular": "^1.3.0-rc.0",
+    "angular-sanitize": "~1.4.9",
+    "angular-websocket": "~1.0.14"
+  }
+}

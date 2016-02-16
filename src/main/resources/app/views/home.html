@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{headingTitle}}
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li ng-repeat="data in RandomNumSocketData.collection track by $index">
+                    {{ data }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
