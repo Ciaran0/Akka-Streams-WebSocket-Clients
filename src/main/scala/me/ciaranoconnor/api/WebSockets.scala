@@ -1,10 +1,10 @@
 package me.ciaranoconnor.api
 
-import akka.NotUsed
-import akka.http.scaladsl.model.ws.{Message, TextMessage}
+import akka.http.scaladsl.model.ws.TextMessage
 import akka.http.scaladsl.server.Directives
 import akka.stream.scaladsl._
-import me.ciaranoconnor.streams.flows.{MyData, NumbersFlow}
+import me.ciaranoconnor.streams.flows.NumbersFlow
+
 import scala.concurrent.forkjoin.ThreadLocalRandom
 
 trait WebSockets extends Directives {

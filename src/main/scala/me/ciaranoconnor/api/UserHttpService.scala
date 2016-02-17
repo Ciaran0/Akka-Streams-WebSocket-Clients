@@ -1,17 +1,14 @@
 package me.ciaranoconnor.api
 
 import javax.ws.rs.Path
+
 import akka.actor.ActorSystem
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives
-import akka.http.scaladsl.model.ws.{TextMessage}
-import akka.stream.scaladsl.{Sink, Source}
 import io.swagger.annotations._
-import me.ciaranoconnor.models.User
-import me.ciaranoconnor.streams.flows.MyData
+import me.ciaranoconnor.models.{MyData, User}
 import org.slf4j.LoggerFactory
-import scala.util.Random
 
 
 @Api(value = "/User", produces = "application/json", description = "Operations on users")
@@ -21,7 +18,6 @@ trait UserHttpService extends Directives with SprayJsonSupport {
 
   val userRoutes = getUsers ~ getUser ~ addUser
   val log = LoggerFactory.getLogger(classOf[UserHttpService])
-  implicit def system: ActorSystem
 
 
   @ApiOperation(value = "Get all users", notes = "Returns all users", nickname = "getUsers", httpMethod = "GET", response = classOf[Seq[User]], responseContainer = "List")
@@ -37,7 +33,6 @@ trait UserHttpService extends Directives with SprayJsonSupport {
             complete {
               //In a real application retrievedUsers would be retrieved from a database
               val retrievedUsers  = List(User(1, "Tom"),User(2,"bob"))
-              system.eventStream.publish(MyData("test"))
               log.debug("Getting users")
               retrievedUsers match {
                 case head::tail => retrievedUsers

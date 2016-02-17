@@ -2,11 +2,11 @@ package me.ciaranoconnor.app
 
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import akka.stream.scaladsl.Source
 import me.ciaranoconnor.api.ApiService
-import me.ciaranoconnor.streams.flows.MyData
+import me.ciaranoconnor.models.MyData
+
 import scala.annotation.tailrec
-import scala.util.{ Success, Failure }
+import scala.util.{Failure, Success}
 
 object Boot extends App with Config with BootedCore with ApiService {
   this: ApiService with Core =>
@@ -19,9 +19,9 @@ object Boot extends App with Config with BootedCore with ApiService {
   @tailrec
   def sendInt(): Unit ={
     Thread sleep 4000
-    var r = ran.nextInt()
+    val r = ran.nextInt()
     log.info(s"sending $r")
-    system.eventStream.publish(MyData("help "+r))
+    system.eventStream.publish(MyData(r.toString))
     sendInt()
   }
 

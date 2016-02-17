@@ -18,7 +18,7 @@ libraryDependencies ++= {
         "org.scala-lang" % "scala-reflect" % scalaVersion.value,
         "org.slf4j" % "slf4j-api" % "1.7.7",
         "ch.qos.logback"  %  "logback-classic"   % "1.1.3",
-        "com.typesafe.akka" % "akka-stream_2.11" % "2.4.2-RC2"
+        "com.typesafe.akka" % "akka-stream_2.11" % akkaHttp
     )
 }
 

@@ -2,7 +2,8 @@ package me.ciaranoconnor.streams.flows
 
 import akka.actor.ActorRef
 import akka.http.scaladsl.model.ws.{Message, TextMessage}
-import akka.stream.scaladsl.{Keep, Sink, Flow, Source}
+import akka.stream.scaladsl.{Flow, Sink, Source}
+import me.ciaranoconnor.models.MyData
 
 import scala.concurrent.ExecutionContext
 
